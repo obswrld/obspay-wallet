@@ -64,7 +64,36 @@ Obspay is a distributed, event-driven payment and wallet infrastructure platform
 
 ## Local Development
 
-*(To be written)*
+### Prerequisites
+
+- Docker Desktop installed and running
+
+### Infrastructure Setup
+
+This starts PostgreSQL, Redis, and RabbitMQ as containers.
+
+1. Copy `.env.example` to `.env` and fill in real values (never commit `.env`).
+2. Start the infrastructure:
+
+```powershell
+   docker compose up -d
+```
+
+3. Verify all three containers are healthy:
+
+```powershell
+   docker compose ps
+```
+
+4. RabbitMQ Management dashboard: http://localhost:15672 (login using `RABBITMQ_USER` / `RABBITMQ_PASSWORD` from your `.env`)
+
+### Databases
+
+PostgreSQL runs as a single container but provisions one isolated database per service on first startup (see `backend/infrastructure/postgres/init-databases.sql`):
+
+`auth_db`, `user_db`, `payment_db`, `wallet_db`, `ledger_db`, `webhook_db`, `notification_db`, `email_db`
+
+No service accesses another service's database directly.
 
 ## Environment Variables
 
