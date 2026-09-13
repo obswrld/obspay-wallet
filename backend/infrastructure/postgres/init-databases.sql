@@ -1,0 +1,8 @@
+CREATE DATABASE auth_db;
+CREATE DATABASE user_db;
+CREATE DATABASE payment_db;
+CREATE DATABASE wallet_db;
+CREATE DATABASE ledger_db;
+CREATE DATABASE webhook_db;
+CREATE DATABASE notification_db;
+CREATE DATABASE email_db;
