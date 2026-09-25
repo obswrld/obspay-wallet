@@ -1,6 +1,5 @@
 package com.obspay.authservice.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.Instant;   
 import java.util.UUID;
 import lombok.*;
@@ -19,10 +18,8 @@ public class UserRegistrationResponse {
 
     private Role role;
 
-    @JsonProperty("isEmailVerified")
     private boolean isEmailVerified;
 
-    @JsonProperty("isAccountLocked")
     private boolean isAccountLocked;
 
     private Instant createdAt;
