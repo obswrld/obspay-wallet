@@ -1,0 +1,11 @@
+{
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "pythonPath": "./backend/services/email-service/.venv/Scripts/python.exe"
+        }
+      }
+    }
+  }
+}
